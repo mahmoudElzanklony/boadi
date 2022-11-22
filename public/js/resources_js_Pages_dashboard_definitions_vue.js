@@ -149,7 +149,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       table_columns: null,
       page_data: null,
       item: null,
-      tags_inputs: this.handling_data['tags']
+      tags_inputs: this.handling_data['tags'],
+      selectedTags: [{
+        key: 'web-development',
+        value: 'Web Development'
+      }, {
+        key: 'php',
+        value: 'PHP'
+      }, {
+        key: 'javascript',
+        value: 'JavaScript'
+      }]
       /*selectedTags: [
           { key: 'web-development', value: 'Web Development' },
           { key: 'php', value: 'PHP' },
