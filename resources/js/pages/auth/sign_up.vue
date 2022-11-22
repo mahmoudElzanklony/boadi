@@ -1,0 +1,124 @@
+<template>
+    <div>
+        <navbar-component></navbar-component>
+        <div class="loading">
+            <img src="/images/loading.gif">
+            <p>{{ switchWord('please_wait_until_finish_processing') }}</p>
+        </div>
+        <div class="auth mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form method="post" @submit.prevent="store_local_data">
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="500">
+                                <label>{{ keywords.username }}</label>
+                                <input name="username" type="text" class="form-control"
+                                       :value="stored_info != null ? stored_info['username']:''"
+                                       required>
+                                <p class="alert alert-danger"></p>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="1000">
+                                <label>{{ keywords.email }}</label>
+                                <input name="email" type="email" class="form-control"
+                                       :value="stored_info != null ? stored_info['email']:''"
+                                       required>
+                                <p class="alert alert-danger"></p>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="1500">
+                                <label>{{ keywords.password }}</label>
+                                <input name="password" type="password" class="form-control"
+                                       :value="stored_info != null ? stored_info['password']:''"
+                                       required>
+                                <p class="alert alert-danger"></p>
+                            </div>
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="2000">
+                                <label>{{ keywords.phone }}</label>
+                                <input name="phone" type="number" min="0" pattern=".{7,}"
+                                       :value="stored_info != null ? stored_info['phone']:''"
+                                       class="form-control" required>
+                                <p class="alert alert-danger"></p>
+                            </div>
+
+                            <div class="form-group" data-aos="fade-up" data-aos-delay="3000">
+                                <input type="submit" name="send"
+                                       class="btn btn-primary"
+                                       :value="switchWord('save')">
+                            </div>
+                            <p class="text-center" >
+                                <span>{{ keywords.have_already_account }} ? </span>
+                                <inertia-link href="/login">{{ keywords.sign_in }}</inertia-link>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="image">
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-component data-aos="fade-down"></footer-component>
+    </div>
+</template>
+
+<script>
+import NavbarComponent from "../../components/NavbarComponent";
+import FooterComponent from "../../components/FooterComponent";
+import SwitchLangWord from "../../mixin/SwitchLangWord";
+import {mapActions} from "vuex";
+export default {
+    name: "sign_up",
+    mixins:[SwitchLangWord],
+    props:['keywords','data','stored_info'],
+    methods:{
+      ...mapActions({
+          'store_local_data':'register/store_personal_data',
+      }),
+      change_role:function(){
+         if(event.target.value == 3){
+             $('.progress-form').fadeOut();
+         }else{
+             $('.progress-form').css('display','flex');
+         }
+      },
+      nextPage:function(url){
+          this.$inertia.visit(url);
+      }
+    },
+    components: {FooterComponent, NavbarComponent}
+}
+</script>
+
+<style lang="scss" scoped>
+@import "../../../sass/variables";
+@import "../../../sass/auth_form_progress";
+.alert-danger{
+    display: none;
+}
+.auth{
+    margin-top: 80px;
+}
+
+.image {
+    background-image: url("/images/auth/register.jpg");
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5px;
+    overflow: hidden;
+    .layer{
+        background-color: #0452991f;
+        width: 100%;
+        height: 100%;
+    }
+}
+form{
+    p{
+        span,a{
+            font-size: $paragraph;
+        }
+
+    }
+}
+</style>

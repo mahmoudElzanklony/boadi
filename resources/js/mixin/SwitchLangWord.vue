@@ -1,0 +1,656 @@
+<template>
+
+</template>
+
+<script>
+export default {
+    name: "SwitchLangWord",
+    data:function (){
+      return {
+          words:{
+              // navbar words
+              Home:{
+                ar:'الرئيسية',
+                en:'Home',
+                tu:'',
+              },
+              Profile:{
+                ar:'الملف الشخصي',
+                en:'profile',
+                tu:'',
+              },
+              Search:{
+                  ar:'أبحث',
+                  en:'Search',
+                  tu:'',
+              },
+              Arabic_Language:{
+                  ar:'اللغة العربية',
+                  en:'Arabic Language',
+                  tu:'',
+              },
+              English_Language:{
+                  ar:'اللغة الأنجليزية',
+                  en:'English Language',
+                  tu:'',
+              },
+              Turkish_Language:{
+                  ar:'اللغة التركية',
+                  en:'Turkish Language',
+                  tu:'',
+              },
+              Help:{
+                  ar:'مساعدة',
+                  en:'Help',
+                  tu:'',
+              },
+              sign_in:{
+                  ar:'تسجيل دخول',
+                  en:'Sign in',
+                  tu:'',
+              },
+              sign_up:{
+                  ar:'تسجيل حساب',
+                  en:'Sign up',
+                  tu:'',
+              },
+              logout:{
+                  ar:'تسجيل خروج',
+                  en:'logout',
+                  tu:'',
+              },
+              registered_from_date:{
+                 ar:'سجل منذ تاريخ ',
+                 en:'registered from date ',
+                 tu:'',
+              },
+              activities:{
+                 ar:'نشاطاتي',
+                 en:'my activities',
+                 tu:'',
+              },
+
+              // footer words
+              website:{
+                  ar:'قاموس بودي',
+                  en:'Boodai Dictionary',
+                  tu:'',
+              },
+              footer_info:{
+                  ar:'يحتوي القاموس على ما يقرب من (15.000) خمسة عشر ألف مصطلح باللغـة الإنجليزية وما يقابلها باللغة العربية.' ,
+                  en:'We provide more than a million terms in the accounts, you can search for anything you want with ease with the ability to download anything you want with ease',
+                  tu:'',
+              },
+              jobs:{
+                  ar:'وظائف',
+                  en:'Jobs',
+                  tu:'',
+              },
+              contact_us:{
+                  ar:'تواصل معنا',
+                  en:'ContactUs',
+                  tu:'',
+              },
+              site_map:{
+                  ar:'خريطة الموقع',
+                  en:'Sitemap',
+                  tu:'',
+              },
+              conditions:{
+                  ar:'الاحكام',
+                  en:'Terms',
+                  tu:'',
+              },
+              searches:{
+                  ar:'أبحاث',
+                  en:'Market Research',
+                  tu:'',
+              },
+              big_photo_upload:{
+                  ar:'مساحه الصوره المرفوعه اكبر من 2 ميجا',
+                  en:'size of photo uploaded is more than 2 mega',
+                  tu:'',
+              },
+              upload_good_image:{
+                ar:'ارفع صورة صحيحة',
+                en:'Upload good image',
+                tu:'',
+              },
+              big_photo_upload_error_preview:{
+                  ar:'لن نستطع من عرض الصور التي مساحتها اكبر من 2 ميجا',
+                  en:'we cant preview photo uploaded that size is more than 2 mega',
+                  tu:'',
+              },
+              you_exceed_number_of_uploaded:{
+                  ar:'لقد تجاوزت عدد الصور المسموح به للرفع',
+                  en:'you exceed number of photos uploaded',
+                  tu:'',
+              },
+              see_more:{
+                 ar:'رؤيه المزيد',
+                 en:'See more',
+                 tu:'',
+              },
+              added_to_fav:{
+                  ar:'تم الأضافه الي المفضلة بنجاح',
+                  en:'added to favourite successfully',
+                  tu:'',
+              },
+              removed_from_fav:{
+                  ar:'تمت الأزالة من المفضلة بنجاح',
+                  en:'removed from favourite successfully',
+                  tu:'',
+              },
+              do_you_need_help:{
+                  ar:'هل تحتاج الي مساعده',
+                  en:'Do you need help',
+                  tu:'',
+              },
+              registered_at_date:{
+                  ar:'سجل في تاريخ',
+                  en:'Registered at date',
+                  tu:'',
+              },
+              request_contact:{
+                  ar:'طلب اتصال',
+                  en:'Request contact',
+                  tu:'',
+              },
+              personal_info:{
+                  ar:'حسابي',
+                  en:'My Account',
+                  tu:'',
+              },
+              select_status:{
+                  ar:'اختر الحالة',
+                  en:'Select Status',
+                  tu:'',
+              },
+              live_listings:{
+                  ar:'نشطة',
+                  en:'Live',
+                  tu:'',
+              },
+              rejected_listings:{
+                  ar:'مرفوضة',
+                  en:'Rejected',
+                  tu:'',
+              },
+              expired_listings:{
+                  ar:'منتهية',
+                  en:'Expired',
+                  tu:'',
+              },
+              pending_listings:{
+                  ar:'معلقة',
+                  en:'Pending',
+                  tu:'',
+              },
+              payment_done:{
+                 ar:'تم الدفع',
+                 en:'payment done',
+                 tu:'',
+              },
+              pending:{
+                  ar:'معلقة',
+                  en:'pending',
+                  tu:'',
+              },
+
+
+              statistics:{
+                  ar:'احصائياتي',
+                  en:'Statistics',
+                  tu:'',
+              },
+              my_favourite:{
+                  ar:'المفضلة',
+                  en:'Favourite',
+                  tu:'',
+              },
+              my_notes:{
+                  ar:'ملاحظاتي',
+                  en:'My Notes',
+                  tu:'',
+              },
+              notifications:{
+                 ar:'الأشعارات',
+                 en:'notifications',
+                 tu:'',
+              },
+              settings:{
+                 ar:'الاعدادت',
+                 en:'settings',
+                 tu:'',
+              },
+              added_to_fav_successfully:{
+                  ar:'تم الأضافة الي المفضلة بنجاح',
+                  en:'added to favourite successfully',
+                  tu:'',
+              },
+              removed_from_fav_successfully:{
+                  ar:'تمت الأزالة من المفضلة بنجاح',
+                  en:'removed from favourite successfully',
+                  tu:'',
+              },
+              about_us:{
+                  ar:'عن المؤلف',
+                  en:'About Author',
+                  tu:'',
+              },
+              about_book:{
+                  ar:'عن القاموس',
+                  en:'About Dictionary',
+                  tu:'',
+              },
+              ads:{
+                 ar:'اعلانات',
+                 en:'Ads',
+                 tu:'',
+              },
+              please_contact_with_this_number:{
+                  ar:'برجاء التواصل مع الرقم',
+                  en:'please contact with this number',
+                  tu:'',
+              },
+              contact_with_us:{
+                  ar:'يمكنك التواصل معنا هنا',
+                  en:'you can contact with us',
+                  tu:'',
+              },
+              sale:{
+                  ar:'بيع',
+                  en:'Sale',
+              },
+              share_this_link:{
+                  ar:'مشاركة هذا الرابط',
+                  en:'Share this link',
+                  tu:'',
+              },
+              close:{
+                  ar:'اغلاق',
+                  en:'Close',
+                  tu:'',
+              },
+              // dashboard words
+              dashboard:{
+                  ar:'الاداره',
+                  en:'Dashboard',
+              },
+              users:{
+                  ar:'المستخدمين',
+                  en:'Users',
+                  tu:'',
+              },
+              chart:{
+                  ar:'الإحصائيات',
+                  en:'Chart',
+                  tu:'',
+              },
+
+              reports:{
+                  ar:'التقارير',
+                  en:'Reports',
+                  tu:'',
+              },
+              client_support:{
+                  ar:'الدعم الفني',
+                  en:'client support',
+                  tu:'',
+              },
+
+              are_you_sure_about_approve:{
+                  ar:'هل انت متأكد من عملية الموافقة',
+                  en:'Are you sure from approving this request',
+                  tu:'',
+              },
+              are_you_sure_about_delete:{
+                  ar:'هل انت متأكد من عملية المسح',
+                  en:'Are you sure from delete operation',
+                  tu:'',
+              },
+              in_case_you_approved_listing_will_be_at_public:{
+                  ar:'في حالة الموافقة علي الطلب سيصبح هذا الطلب متاح يستطيع اي شخص رؤيتة',
+                  en:'In case you approved this request , the request will be available to any one to see it',
+                  tu:'',
+              },
+              in_case_you_delete_you_cant_retrieve_it:{
+                  ar:'في حالة الموافقة علي طلب المسح لن تستطيع استرجاع البيانات مرة اخري',
+                  en:'In case you delete you cant retrieve data another time',
+                  tu:'',
+              },
+              yes_iam_sure:{
+                  ar:'نعم انا متأكد',
+                  en:'yes iam sure',
+                  tu:'',
+              },
+              cancel:{
+                  ar:'إلغاء',
+                  en:'Cancel',
+                  tu:'',
+              },
+              approved_done:{
+                  ar:'تمت الموافقة',
+                  en:'Approved !',
+                  tu:'',
+              },
+              deleted_done:{
+                  ar:'تم المسح',
+                  en:'Deleted !',
+                  tu:'',
+              },
+              approved_done_successfully:{
+                  ar:'تمت عملية الموافقة بنجاح',
+                  en:'Approved done successfully',
+                  tu:'',
+              },
+              deleted_done_successfully:{
+                  ar:'تمت عملية المسح بنجاح',
+                  en:'Deleted done successfully',
+                  tu:'',
+              },
+              add_new_item:{
+                  ar:'إضافة عنصر جديد',
+                  en:'Add new Item',
+                  tu:'',
+              },
+              update_new_item:{
+                  ar:'تعديل بيانات ',
+                  en:'update info of',
+                  tu:'',
+              },
+              upload_image:{
+                  ar:'أرفع صورة',
+                  en:'upload image',
+                  tu:'',
+              },
+              upload_files:{
+                 ar:'رفع الملفات',
+                 en:'upload files',
+                 tu:'',
+              },
+              upload_file:{
+                 ar:'أرفع الملف',
+                 en:'Upload file',
+                 tu:'',
+              },
+              upload_quotation_file:{
+                 ar:'ارفع ملف الكوتيشن',
+                 en:'upload quotation file',
+                 tu:'',
+              },
+              upload_product_file:{
+                  ar:'ارفع ملف اضافه المنتجات',
+                  en:'upload file of upload products',
+                  tu:'',
+              },
+              upload_images:{
+                  ar:'أرفع الصور',
+                  en:'upload images',
+                  tu:'',
+              },
+              appearance:{
+                  ar:'عملية الظهور',
+                  en:'appearance',
+                  tu:'',
+              },
+              actions:{
+                  ar:'الأوامر',
+                  en:'actions',
+                  tu:'',
+              },
+              update_status_successfully:{
+                  ar:'تم تحديث الحالة بنجاح',
+                  en:'Status updated Successfully',
+                  tu:'',
+              },
+              select_year:{
+                  ar:'أختر السنة',
+                  en:'Select year',
+                  tu:'',
+              },
+              area:{
+                  ar:'منطقة',
+                  en:'Area',
+                  tu:'',
+              },
+              city:{
+                  ar:'مدينة',
+                  en:'City',
+                  tu:'',
+              },
+              government:{
+                  ar:'محافظة',
+                  en:'Government',
+                  tu:'',
+              },
+              country:{
+                  ar:'دولة',
+                  en:'Country',
+                  tu:'',
+              },
+              select_country:{
+                  ar:'اختر الدولة',
+                  en:'Select country',
+                  tu:'',
+              },
+              select_government:{
+                  ar:'اختر المحافظة',
+                  en:'Select government',
+                  tu:'',
+              },
+              select_city:{
+                  ar:'اختر المدينة',
+                  en:'Select city',
+                  tu:'',
+              },
+              select_area:{
+                  ar:'اختر المنطقة',
+                  en:'Select area',
+                  tu:'',
+              },
+              visible:{
+                  ar:'متاح',
+                  en:'visible',
+                  tu:'',
+              },
+              not_visible:{
+                  ar:'غير متاح',
+                  en:'not visible',
+                  tu:'',
+              },
+              save:{
+                  ar:'حفظ',
+                  en:'Save',
+                  tu:'',
+              },
+              send:{
+                ar:'أرسال',
+                en:'Send',
+                tu:'',
+              },
+              name:{
+                  ar:'الأسم',
+                  en:'Name',
+                  tu:'',
+              },
+              add_new_question:{
+                  ar:'أضف سؤال جديد',
+                  en:'Add new question',
+                  tu:'',
+              },
+              filter:{
+                  ar:'فلترة',
+                  en:'Filter',
+                  tu:'',
+              },
+              related_to:{
+                  ar:'تابعة ل',
+                  en:'Related to',
+                  tu:'',
+              },
+              block:{
+                  ar:'محظور',
+                  en:'Block',
+                  tu:'',
+              },
+              yes:{
+                  ar:'نعم',
+                  en:'Yes',
+                  tu:'',
+              },
+              no:{
+                  ar:'لا',
+                  en:'No',
+                  tu:'',
+              },
+              leave_password:{
+                  ar:'أترك كلمة المرور فارغة في حالة عدم رغبتك في التعديل عليها',
+                  en:'',
+                  tu:'',
+              },
+              press_here:{
+                  ar:'أضغط هنا',
+                  en:'Press Here',
+                  tu:'',
+              },
+              select_best_choice:{
+                  ar:'أختر ما يناسبك',
+                  en:'Select best choice',
+                  tu:'',
+              },
+              search_for_you_best:{
+                  ar:'ابحث عن ما يناسبك',
+                  en:'search about anything',
+                  tu:'',
+              },
+              in:{
+                  ar:'في',
+                  en:'in',
+                  tu:'',
+              },
+              for:{
+                  ar:'ل',
+                  en:'for ',
+                  tu:'',
+              },
+              currency:{
+                  ar:'دولار',
+                  en:'dollar',
+                  tu:'',
+              },
+              you_should_login:{
+                  ar:'من فضلك سجل دخول اولا',
+                  en:'You should login first',
+                  tu:'',
+              },
+              seller_phone:{
+                  ar:'رقم تليفون البائع',
+                  en:'Phone Seller',
+                  tu:'',
+              },
+              next:{
+                  ar:'التالي',
+                  en:'next',
+                  tu:'',
+              },
+              prev:{
+                  ar:'السابق',
+                  en:'previous',
+                  tu:'',
+              },
+              select_best_for_you:{
+                  ar:'اختر ما يناسبك',
+                  en:'Select what you want',
+                  tu:'',
+              },
+              problem:{
+                  ar:'مشكلة',
+                  en:'Problem',
+                  tu:'',
+              },
+              thanks:{
+                   ar:'شكر و تقدير',
+                   en:'thanks',
+                   tu:'',
+              },
+              development:{
+                   ar:'تطوير فني',
+                   en:'Development',
+                   tu:'',
+              },
+              add_another_item:{
+                  ar:'اضافه عنصر جديد',
+                  en:'Add another item',
+                  tu:'',
+              },
+              please_enter_all_required_data:{
+                  ar:'من فضلك ادخل قيم للبيانات الاجبارية',
+                  en:'Please enter all required inputs',
+                  tu:'',
+              },
+              print_bill:{
+                  ar:'طباعه الفاتورة',
+                  en:'Print bill',
+                  tu:'',
+              },
+              please_wait_until_finish_processing:{
+                  ar:'من فضلك انتظر حتي يتم اكتمال التحميل',
+                  en:'please wait until finish processing',
+                  tu:'',
+              },
+              definitions:{
+                  ar:'تعريفات',
+                  en:'definitions',
+                  tu:''
+              },
+              uploadfile:{
+                  ar:'رفع الملف',
+                  en:'upload file',
+                  tu:'',
+              },
+
+              download_this_template:{
+                  ar:'يرجي تحميل هذه التمبلت و تعبئتها بالمصلحات التي تريدها',
+                  en:'download this template',
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          }
+      }
+    },
+    methods:{
+        switchWord:function (word){
+            // find word first
+            if(Object.keys(this.words).includes(word)){
+                // yes found it  =======> you passed english
+                if(this.$inertia.page.props.lang == "tu"){
+                    return this.words[word]['en'];
+                }else {
+                    return this.words[word][this.$inertia.page.props.lang];
+                }
+            }
+        },
+    }
+}
+</script>
+
+<style scoped>
+
+</style>
