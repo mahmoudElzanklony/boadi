@@ -9,8 +9,10 @@ use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\WithValidation;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
 
-class ExpressionsImportCSV implements ToModel, WithValidation, WithHeadingRow
+class ExpressionsImportCSV implements ToModel, WithValidation, WithHeadingRow  , WithChunkReading, ShouldQueue
 {
     use Importable;
     /**
@@ -33,16 +35,22 @@ class ExpressionsImportCSV implements ToModel, WithValidation, WithHeadingRow
         ]);
     }
 
+    public function chunkSize(): int
+    {
+        return 1000;
+    }
 
     public function rules(): array
     {
         return [
-            'term_in_arabic' => 'required',
-            'term_in_english' => 'required',
-            'expression' => 'required',
+         //   'term_in_arabic' => 'required',
+         //   'term_in_english' => 'required',
+         //   'expression' => 'required',
         //    'tags' => 'nullable',
         ];
     }
+
+
 
     public function customValidationMessages()
     {

@@ -45,7 +45,7 @@ Route::group(['middleware'=>'changeLang'],function (){
 
     Route::get('/ads',[AdsController::class,'index']);
 
-    Route::group(['prefix'=>'/dashboard'],function (){
+    Route::group(['prefix'=>'/dashboard','middleware'=>'auth'],function (){
        Route::get('/',[DashboardController::class,'index']);
        Route::get('/uploadfile',[DashboardController::class,'upload_files']);
        Route::get('/definitions',[DashboardController::class,'definitions']);

@@ -181,7 +181,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+     //   Barryvdh\Debugbar\ServiceProvider::class,
 
 
     ],
@@ -238,7 +238,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image'=>Intervention\Image\Facades\Image::class,
         'Socialite'=>Laravel\Socialite\Facades\Socialite::class,
-        'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
+       // 'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
         'Excel'=>Maatwebsite\Excel\Facades\Excel::class,
 
     ],

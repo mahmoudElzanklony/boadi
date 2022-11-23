@@ -87,11 +87,11 @@ class DashboardServiceClass extends Controller
         $file = request()->file('file');
         $exten = $file->getClientOriginalExtension();
         $file_name = time().rand(0,9999999999999). '_excel.' .$exten;
-
+        ini_set ('max_execution_time', 3600);
+        ini_set ('memory_limit', '2048M');
         try {
             // create new quotation bill
-
-            Excel::import(new ExpressionsImportCSV,
+            Excel::queueImport(new ExpressionsImportCSV,
                 request()->file('file')
             );
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {

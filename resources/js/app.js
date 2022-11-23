@@ -99,7 +99,7 @@ var vm = new Vue({
     render: h => h(App, {
         props: {
             initialPage: JSON.parse(el.dataset.page),
-            resolveComponent: name => import('./Pages/' + name + '.vue').then(module => module.default)
+            resolveComponent: name => import('./pages/' + name + '.vue').then(module => module.default)
         }
 
     }),

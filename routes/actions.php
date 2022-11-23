@@ -26,15 +26,7 @@ Route::group(['middleware'=>'changeLang'],function (){
         Route::post('/',[AuthController::class,'register_post']);
     });
     Route::post('/login',[AuthController::class,'login_post']);
-    // profile
-    Route::group(['prefix'=>'/profile','middleware'=>['auth']],function(){
-        Route::post('/update-email-image',[ProfileController::class,'update_email_image']);
-        Route::post('/update-password',[ProfileController::class,'update_password']);
-        Route::post('/update-personal-data',[ProfileController::class,'update_personal_data']);
-        Route::post('/update-secondary-data',[ProfileController::class,'update_secondary_data']);
-        Route::post('/send-quotation',[ProfileController::class,'send_quotation']);
-        Route::post('/send-quotation-excel',[ProfileController::class,'send_quotation_excel']);
-    });
+    
     // user
     Route::group(['prefix'=>'/user'],function(){
         Route::post('/toggle-fav',[UsersController::class,'toggle_fav'])->middleware('auth');

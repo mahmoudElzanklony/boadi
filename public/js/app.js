@@ -2216,7 +2216,7 @@ var vm = new vue__WEBPACK_IMPORTED_MODULE_5__.default({
       props: {
         initialPage: JSON.parse(el.dataset.page),
         resolveComponent: function resolveComponent(name) {
-          return __webpack_require__("./resources/js/Pages lazy recursive ^\\.\\/.*\\.vue$")("./" + name + ".vue").then(function (module) {
+          return __webpack_require__("./resources/js/pages lazy recursive ^\\.\\/.*\\.vue$")("./" + name + ".vue").then(function (module) {
             return module["default"];
           });
         }
@@ -98105,100 +98105,100 @@ var index = {
 
 /***/ }),
 
-/***/ "./resources/js/Pages lazy recursive ^\\.\\/.*\\.vue$":
+/***/ "./resources/js/pages lazy recursive ^\\.\\/.*\\.vue$":
 /*!*****************************************************************!*\
-  !*** ./resources/js/Pages/ lazy ^\.\/.*\.vue$ namespace object ***!
+  !*** ./resources/js/pages/ lazy ^\.\/.*\.vue$ namespace object ***!
   \*****************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
 	"./about_book.vue": [
-		"./resources/js/Pages/about_book.vue",
-		"resources_js_Pages_about_book_vue"
+		"./resources/js/pages/about_book.vue",
+		"resources_js_pages_about_book_vue"
 	],
 	"./about_us.vue": [
-		"./resources/js/Pages/about_us.vue",
-		"resources_js_Pages_about_us_vue"
+		"./resources/js/pages/about_us.vue",
+		"resources_js_pages_about_us_vue"
 	],
 	"./ads.vue": [
-		"./resources/js/Pages/ads.vue",
-		"resources_js_Pages_ads_vue"
+		"./resources/js/pages/ads.vue",
+		"resources_js_pages_ads_vue"
 	],
 	"./auth/forget_password.vue": [
-		"./resources/js/Pages/auth/forget_password.vue",
-		"resources_js_Pages_auth_forget_password_vue"
+		"./resources/js/pages/auth/forget_password.vue",
+		"resources_js_pages_auth_forget_password_vue"
 	],
 	"./auth/new_password.vue": [
-		"./resources/js/Pages/auth/new_password.vue",
-		"resources_js_Pages_auth_new_password_vue"
+		"./resources/js/pages/auth/new_password.vue",
+		"resources_js_pages_auth_new_password_vue"
 	],
 	"./auth/sign_in.vue": [
-		"./resources/js/Pages/auth/sign_in.vue",
-		"resources_js_Pages_auth_sign_in_vue"
+		"./resources/js/pages/auth/sign_in.vue",
+		"resources_js_pages_auth_sign_in_vue"
 	],
 	"./auth/sign_up.vue": [
-		"./resources/js/Pages/auth/sign_up.vue",
-		"resources_js_Pages_auth_sign_up_vue"
+		"./resources/js/pages/auth/sign_up.vue",
+		"resources_js_pages_auth_sign_up_vue"
 	],
 	"./contactus.vue": [
-		"./resources/js/Pages/contactus.vue",
-		"resources_js_Pages_contactus_vue"
+		"./resources/js/pages/contactus.vue",
+		"resources_js_pages_contactus_vue"
 	],
 	"./dashboard/ads.vue": [
-		"./resources/js/Pages/dashboard/ads.vue",
-		"resources_js_Pages_dashboard_ads_vue"
+		"./resources/js/pages/dashboard/ads.vue",
+		"resources_js_pages_dashboard_ads_vue"
 	],
 	"./dashboard/contact_us.vue": [
-		"./resources/js/Pages/dashboard/contact_us.vue",
-		"resources_js_Pages_dashboard_contact_us_vue"
+		"./resources/js/pages/dashboard/contact_us.vue",
+		"resources_js_pages_dashboard_contact_us_vue"
 	],
 	"./dashboard/definitions.vue": [
-		"./resources/js/Pages/dashboard/definitions.vue",
-		"resources_js_Pages_dashboard_definitions_vue"
+		"./resources/js/pages/dashboard/definitions.vue",
+		"resources_js_pages_dashboard_definitions_vue"
 	],
 	"./dashboard/index.vue": [
-		"./resources/js/Pages/dashboard/index.vue",
-		"resources_js_Pages_dashboard_index_vue"
+		"./resources/js/pages/dashboard/index.vue",
+		"resources_js_pages_dashboard_index_vue"
 	],
 	"./dashboard/notifications.vue": [
-		"./resources/js/Pages/dashboard/notifications.vue",
-		"resources_js_Pages_dashboard_notifications_vue"
+		"./resources/js/pages/dashboard/notifications.vue",
+		"resources_js_pages_dashboard_notifications_vue"
 	],
 	"./dashboard/reports.vue": [
-		"./resources/js/Pages/dashboard/reports.vue",
-		"resources_js_Pages_dashboard_reports_vue"
+		"./resources/js/pages/dashboard/reports.vue",
+		"resources_js_pages_dashboard_reports_vue"
 	],
 	"./dashboard/settings.vue": [
-		"./resources/js/Pages/dashboard/settings.vue",
-		"resources_js_Pages_dashboard_settings_vue"
+		"./resources/js/pages/dashboard/settings.vue",
+		"resources_js_pages_dashboard_settings_vue"
 	],
 	"./dashboard/specific_statistics.vue": [
-		"./resources/js/Pages/dashboard/specific_statistics.vue",
-		"resources_js_Pages_dashboard_specific_statistics_vue"
+		"./resources/js/pages/dashboard/specific_statistics.vue",
+		"resources_js_pages_dashboard_specific_statistics_vue"
 	],
 	"./dashboard/statistics.vue": [
-		"./resources/js/Pages/dashboard/statistics.vue",
-		"resources_js_Pages_dashboard_statistics_vue"
+		"./resources/js/pages/dashboard/statistics.vue",
+		"resources_js_pages_dashboard_statistics_vue"
 	],
 	"./dashboard/upload_files.vue": [
-		"./resources/js/Pages/dashboard/upload_files.vue",
-		"resources_js_Pages_dashboard_upload_files_vue"
+		"./resources/js/pages/dashboard/upload_files.vue",
+		"resources_js_pages_dashboard_upload_files_vue"
 	],
 	"./dashboard/users.vue": [
-		"./resources/js/Pages/dashboard/users.vue",
-		"resources_js_Pages_dashboard_users_vue"
+		"./resources/js/pages/dashboard/users.vue",
+		"resources_js_pages_dashboard_users_vue"
 	],
 	"./feedback.vue": [
-		"./resources/js/Pages/feedback.vue",
-		"resources_js_Pages_feedback_vue"
+		"./resources/js/pages/feedback.vue",
+		"resources_js_pages_feedback_vue"
 	],
 	"./home.vue": [
-		"./resources/js/Pages/home.vue",
-		"resources_js_Pages_home_vue"
+		"./resources/js/pages/home.vue",
+		"resources_js_pages_home_vue"
 	],
 	"./notifications.vue": [
-		"./resources/js/Pages/notifications.vue",
-		"resources_js_Pages_notifications_vue"
+		"./resources/js/pages/notifications.vue",
+		"resources_js_pages_notifications_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -98216,7 +98216,7 @@ function webpackAsyncContext(req) {
 	});
 }
 webpackAsyncContext.keys = () => (Object.keys(map));
-webpackAsyncContext.id = "./resources/js/Pages lazy recursive ^\\.\\/.*\\.vue$";
+webpackAsyncContext.id = "./resources/js/pages lazy recursive ^\\.\\/.*\\.vue$";
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -98337,7 +98337,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_about_book_vue":"7cd8f67f583a6a368d51","resources_js_Pages_about_us_vue":"c9a50ca9cf911e91ec8b","resources_js_Pages_ads_vue":"93089ee906752adfad8e","resources_js_Pages_auth_forget_password_vue":"b66f69b31f5d702e0fdb","resources_js_Pages_auth_new_password_vue":"8427c0a94983a00fa725","resources_js_Pages_auth_sign_in_vue":"587d75152988b341434f","resources_js_Pages_auth_sign_up_vue":"9c446c5ee181e82e024a","resources_js_Pages_contactus_vue":"78dca9eb4dd4ebec2c7f","resources_js_Pages_dashboard_ads_vue":"e373a29b8bc327c7101c","resources_js_Pages_dashboard_contact_us_vue":"3572557ed2da8e087a22","resources_js_Pages_dashboard_definitions_vue":"ec344d3afde4ca3045cb","resources_js_Pages_dashboard_index_vue":"8f72c0f85f84afb69dcd","resources_js_Pages_dashboard_notifications_vue":"f3a3d709a49f8540439e","resources_js_Pages_dashboard_reports_vue":"a8e350acc99a05c7b67d","resources_js_Pages_dashboard_settings_vue":"0362e659a8b8d9e67bfc","resources_js_Pages_dashboard_specific_statistics_vue":"e91020ab4deb568f8931","resources_js_Pages_dashboard_statistics_vue":"5e487a49eb8f9960499f","resources_js_Pages_dashboard_upload_files_vue":"c07e18daa9eb6bc4f2d6","resources_js_Pages_dashboard_users_vue":"7091f4e73794cd8b5999","resources_js_Pages_feedback_vue":"f884f33f7c2915d0dce3","resources_js_Pages_home_vue":"1cf4ac6d39e3fd250573","resources_js_Pages_notifications_vue":"910184f666fb38ab38a4"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_pages_about_book_vue":"8bb12c39e0d3eb8fca1b","resources_js_pages_about_us_vue":"7f7a042219724221bde0","resources_js_pages_ads_vue":"fb13424a53524545e9da","resources_js_pages_auth_forget_password_vue":"f79d3ee508667d9b1c39","resources_js_pages_auth_new_password_vue":"f64b381559c09e9ea1a0","resources_js_pages_auth_sign_in_vue":"b300f3e3945325844e89","resources_js_pages_auth_sign_up_vue":"56cd665706f304da5f05","resources_js_pages_contactus_vue":"bcae41116c643c10a0b5","resources_js_pages_dashboard_ads_vue":"271b9b1b3c6208d6b83e","resources_js_pages_dashboard_contact_us_vue":"5f845d31461a41b77930","resources_js_pages_dashboard_definitions_vue":"8e3eebbc4e8c9b169756","resources_js_pages_dashboard_index_vue":"eb89d2604d6ff7317276","resources_js_pages_dashboard_notifications_vue":"6e96b51577d86e5cd2ed","resources_js_pages_dashboard_reports_vue":"ca3fd1e832caad1d1ff6","resources_js_pages_dashboard_settings_vue":"4391cdbe9075b9101324","resources_js_pages_dashboard_specific_statistics_vue":"f3c3cdb21be80412cf06","resources_js_pages_dashboard_statistics_vue":"992f0e85d4528e758f97","resources_js_pages_dashboard_upload_files_vue":"015cd1c8c00ad67dcb08","resources_js_pages_dashboard_users_vue":"c501e541b1222d652143","resources_js_pages_feedback_vue":"7260e2b58eaf5800142a","resources_js_pages_home_vue":"aca2d9d3c2316e40f733","resources_js_pages_notifications_vue":"7b93effaf7adbd4bae18"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	
