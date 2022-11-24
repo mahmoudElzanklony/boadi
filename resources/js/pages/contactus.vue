@@ -74,9 +74,6 @@ export default {
             'save_message':'contactus/save_message'
         }),
         onCaptchaVerified: function (recaptchaToken) {
-            const self = this;
-            self.status = "submitting";
-            self.$refs.recaptcha.reset();
             document.querySelector('input[type="submit"]').removeAttribute('disabled')
             document.querySelector('input[type="submit"]').style.opacity = 1
 
