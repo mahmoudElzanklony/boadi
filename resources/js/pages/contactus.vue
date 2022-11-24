@@ -41,15 +41,15 @@
                         </div>
                     </div>
 
-
-                    <div class="col-12">
+                    <VueRecaptcha sitekey="6LcXhy0jAAAAAG-s5D9y7tzlNVtq0i1hrCFBpccg"></VueRecaptcha>
+                    <div class="col-12 mt-3">
                         <div class="form-group">
-                            <input class="form-control btn btn-primary d-block w-100 text-center" :value="switchWord('send')" type="submit">
+                            <input class="form-control btn btn-primary d-block w-100 text-center" :value="switchWord('send')" type="submit" disabled>
                         </div>
                     </div>
                 </div>
 
-                <VueRecaptcha sitekey="6LcXhy0jAAAAAG-s5D9y7tzlNVtq0i1hrCFBpccg"></VueRecaptcha>
+
 
 
             </form>
@@ -73,6 +73,14 @@ export default {
         ...mapActions({
             'save_message':'contactus/save_message'
         }),
+        onCaptchaVerified: function (recaptchaToken) {
+            const self = this;
+            self.status = "submitting";
+            self.$refs.recaptcha.reset();
+            document.querySelector('input[type="submit"]').removeAttribute('disabled')
+            document.querySelector('input[type="submit"]').style.opacity = 1
+
+        },
 
     },
     mounted() {
@@ -83,5 +91,9 @@ export default {
 </script>
 
 <style scoped>
-
+form{
+    input[type="submit"]{
+        opacity: 0.1;
+    }
+}
 </style>
