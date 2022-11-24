@@ -48,6 +48,10 @@
                         </div>
                     </div>
                 </div>
+
+                <VueRecaptcha sitekey="6LcXhy0jAAAAAG-s5D9y7tzlNVtq0i1hrCFBpccg"></VueRecaptcha>
+
+
             </form>
         </div>
         <footer-component></footer-component>
@@ -59,6 +63,7 @@ import NavbarComponent from "../components/NavbarComponent";
 import SwitchLangWord from "../mixin/SwitchLangWord";
 import FooterComponent from "../components/FooterComponent";
 import {mapActions} from "vuex";
+import { VueRecaptcha } from 'vue-recaptcha';
 
 export default {
     name: "contactus",
@@ -73,7 +78,7 @@ export default {
     mounted() {
 
     },
-    components: {FooterComponent, NavbarComponent}
+    components: {FooterComponent, NavbarComponent,VueRecaptcha}
 }
 </script>
 

@@ -772,7 +772,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     console.log(this_component);
 
     if (this.$inertia.page.props.lang == 'ar') {
-      var url = 'https://cdn.datatables.net/plug-ins/1.11.4/i18n/ar.json';
+      if (window.location.href.indexOf('definitions') >= 0 || window.location.pathname == '/') {
+        var url = window.location.origin + '/ar.json';
+      } else {
+        var url = 'https://cdn.datatables.net/plug-ins/1.11.4/i18n/ar.json';
+      }
+
+      console.log(url);
       var export_selected = 'استيراد المحدد';
     } else {
       var url = 'https://cdn.datatables.net/plug-ins/1.11.4/i18n/en-gb.json';
