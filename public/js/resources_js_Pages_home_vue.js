@@ -1173,6 +1173,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2071,10 +2087,6 @@ var render = function () {
     [
       _c("navbar-component", { attrs: { "data-aos": "fade-left" } }),
       _vm._v(" "),
-       false
-        ? 0
-        : _vm._e(),
-      _vm._v(" "),
       _c("section", { staticClass: "about" }, [
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row align-items-center" }, [
@@ -2221,10 +2233,6 @@ var render = function () {
         ]),
       ]),
       _vm._v(" "),
-       false
-        ? 0
-        : _vm._e(),
-      _vm._v(" "),
       _c(
         "section",
         {
@@ -2249,9 +2257,9 @@ var render = function () {
                     { key: index, staticClass: "cursor-pointer" },
                     [
                       _vm._v(
-                        "\n                        " +
+                        "\n                            " +
                           _vm._s(i) +
-                          "\n                    "
+                          "\n                        "
                       ),
                     ]
                   )
@@ -2284,33 +2292,12 @@ var render = function () {
         ]
       ),
       _vm._v(" "),
-       false
-        ? 0
-        : _vm._e(),
-      _vm._v(" "),
-       false
-        ? 0
-        : _vm._e(),
-      _vm._v(" "),
-       false
-        ? 0
-        : _vm._e(),
-      _vm._v(" "),
       _c("footer-component"),
     ],
     1
   )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-lg-4 col-12" }, [
-      _c("div", { staticClass: "image", attrs: { "data-aos": "fade-right" } }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

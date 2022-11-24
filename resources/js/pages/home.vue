@@ -1,6 +1,7 @@
 <template>
     <div>
         <navbar-component data-aos="fade-left"></navbar-component>
+<!--
         <header data-aos="fade-up" class="main-section" v-if="false">
             <div class="layer" style="background-color: unset">
                 <div class="container w-50">
@@ -21,6 +22,9 @@
                 </div>
             </div>
         </header>
+        -->
+
+
         <section class="about">
             <div class="container">
                 <div class="row align-items-center">
@@ -69,6 +73,7 @@
                 </div>
             </div>
         </section>
+<!--
         <section class="services main-section" v-if="false">
             <div class="container">
                 <h2 class="main-title">
@@ -99,6 +104,7 @@
                 </div>
             </div>
         </section>
+        -->
         <!------------------start of brands section------------------------ -->
         <section class="expressions mt-4 overflow-hidden main-section"  data-aos="fade-up" data-aos-delay="500">
             <div class="container">
@@ -111,7 +117,7 @@
                             {{ i }}
                         </span>
                     </div>
-                    <table class="myTable table table-bordered table-striped table-striped table-hover">
+                    <table  class="myTable table table-bordered table-striped table-striped table-hover">
                         <thead>
                             <tr>
                                 <td v-for="(td,index) in data['table_head']" :key="index">{{ td }}</td>
@@ -128,6 +134,7 @@
         <!------------------end of brands section------------------------ -->
         <!------------------start of mobile section------------------------ -->
 
+<!--
         <section class="mobile main-section" v-if="false">
             <div class="container">
                 <div class="row align-items-center">
@@ -145,8 +152,10 @@
             </div>
         </section>
 
+        -->
         <!------------------end of mobile section------------------------ -->
         <!------------------start of transfer section------------------------ -->
+<!--
 
         <section class="features main-section" v-if="false">
             <div class="container">
@@ -203,10 +212,14 @@
             </div>
         </section>
 
+-->
+
         <!------------------end of transfer section------------------------ -->
 
 
         <!----------------------------start of support----------------------------------- -->
+<!--
+
         <section class="support_customer main-section" data-aos="fade-down" v-if="false">
             <div class="layer">
                 <div class="container text-center">
@@ -216,6 +229,9 @@
                 </div>
             </div>
         </section>
+
+        -->
+
         <!----------------------------end of support----------------------------------- -->
 
         <footer-component></footer-component>
