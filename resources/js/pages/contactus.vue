@@ -41,7 +41,7 @@
                         </div>
                     </div>
 
-                    <VueRecaptcha sitekey="6LcXhy0jAAAAAG-s5D9y7tzlNVtq0i1hrCFBpccg"></VueRecaptcha>
+                    <VueRecaptcha @verify="onCaptchaVerified" sitekey="6LcXhy0jAAAAAG-s5D9y7tzlNVtq0i1hrCFBpccg"></VueRecaptcha>
                     <div class="col-12 mt-3">
                         <div class="form-group">
                             <input class="form-control btn btn-primary d-block w-100 text-center" :value="switchWord('send')" type="submit" disabled>
@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 form{
     input[type="submit"]{
         opacity: 0.1;
