@@ -17,7 +17,6 @@ class welcome_handling
           //     'tags'=>trans('keywords.tags'),
                'expression'=>trans('keywords.expression'),
            ],
-           'data'=>definisions::query()->orderBy('id','DESC')->get()
         ];
     }
 }
