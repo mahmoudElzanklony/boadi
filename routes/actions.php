@@ -26,12 +26,16 @@ Route::group(['middleware'=>'changeLang'],function (){
         Route::post('/',[AuthController::class,'register_post']);
     });
     Route::post('/login',[AuthController::class,'login_post']);
-    
+
     // user
     Route::group(['prefix'=>'/user'],function(){
         Route::post('/toggle-fav',[UsersController::class,'toggle_fav'])->middleware('auth');
         Route::post('/show-seller-phone',[UsersController::class,'show_seller_phone']);
     });
+
+    // ads
+    Route::post('/load-ads',[\App\Http\Controllers\AdsController::class,'load_ads']);
+
     // general
     Route::post('/deleteitem',[GeneralServiceController::class,'delete_item']);
     Route::post('/paginate-notifications',[GeneralServiceController::class,'paginate_notification_data']);

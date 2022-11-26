@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\traits\messages;
+use App\Models\ads;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -17,5 +19,10 @@ class AdsController extends Controller
                'your_feedback'=>trans('keywords.your_feedback'),
            ]
         ]);
+    }
+
+
+    public function load_ads(){
+        return messages::success_output('',ads::query()->where('is_visible','=',1)->get());
     }
 }

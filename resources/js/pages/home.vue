@@ -45,25 +45,25 @@
                     <div class="col-md-8">
                         <div class="ads">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators" v-if="data['ads'].length > 1">
-                                    <li data-target="#carouselExampleIndicators" v-for="(i,index) in data['ads'].length"
+                                <ol class="carousel-indicators" v-if="ads_data.length > 1">
+                                    <li data-target="#carouselExampleIndicators" v-for="(i,index) in ads_data.length"
                                         :key="index"
                                         :data-slide-to="index" :class="index == 0 ? 'active':''"></li>
                                 </ol>
                                 <div class="carousel-inner">
                                     <div :class="'carousel-item '+(index == 0 ? 'active':'')"
-                                         v-for="(ad,index) in data['ads']"
+                                         v-for="(ad,index) in ads_data"
                                          :key="index">
                                         <a :href="ad['link']">
                                             <img class="d-block w-100" :src="'/images/ads/'+ad['image']" alt="First slide">
                                         </a>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" v-if="data['ads'].length > 1" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" v-if="ads_data.length > 1" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" v-if="data['ads'].length > 1" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <a class="carousel-control-next" v-if="ads_data.length > 1" href="#carouselExampleIndicators" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -244,6 +244,7 @@ import NavbarComponent from "../components/NavbarComponent";
 import tableData from "../mixin/tableData";
 import switchLang from "../mixin/SwitchLangWord";
 import FooterComponent from "../components/FooterComponent";
+import {mapActions , mapGetters , mapMutations} from "vuex";
 export default {
     name: "home",
     props:['keywords','data','letters'],
@@ -276,15 +277,18 @@ export default {
                 all_thead_tds[input].innerHTML = '<input class="form-control" name="' + Object.keys(this.data['table_head'])[input] + '" placeholder="' + all_thead_tds[input].textContent + '">';
             }
         }
+
+        this.load_ads();
+    },
+    computed:{
+        ...mapGetters({
+            'ads_data':'home/get_data',
+        })
     },
     methods:{
-        send_data:function(){
-            var target = event.target;
-            var data = new FormData(target);
-            axios.post('/import',data).then((e)=>{
-               console.log(e);
-            });
-        },
+        ...mapActions({
+            'load_ads':'home/load_ads',
+        })
 
     }
 }

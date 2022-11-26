@@ -1,6 +1,6 @@
 <template>
-    <footer class="p-4 mt-3">
-        <div class="container">
+    <footer class="mt-3">
+        <div class="container p-4">
             <div class="row">
                 <div class="col-md-6">
                     <h1>{{ switchWord('website') }}</h1>
@@ -67,6 +67,9 @@
                 </div>
             </div>
         </div>
+        <p class="text-center p-3 copy">
+            <a href="http://www.algorithimia.me/" target="_blank">تم تطوير الموقع من قبل شركة خوارزميا للبرمجيات</a>
+        </p>
     </footer>
 </template>
 
@@ -82,6 +85,12 @@ export default {
 @import "resources/sass/variables";
 footer{
     background-color: $main_color;
+    .copy{
+        background-color: #302d2d;
+        a{
+            color:white;
+        }
+    }
     .row{
         >div:first-of-type{
             h1{

@@ -6,6 +6,7 @@ import register from "./modules/auth/register";
 import login from "./modules/auth/login";
 import areas from "./modules/areas";
 import contactus from "./modules/contactus";
+import home from "./modules/home";
 //------------------- start of  dashboard---------------------------
 
 import upload_files from "./modules/dashboard/upload_files";
@@ -19,6 +20,7 @@ import favourite from "./modules/users/favourite";
 // Create a new store instance.
 const store = new Vuex.Store({
     modules:{
+        home,
         register,
         login,
         areas,
