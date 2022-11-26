@@ -15,22 +15,16 @@ class WelcomeController extends Controller
     //
     public function index(){
         //return request()->cookie('inilalize');
-
-        return Inertia::render('home');
-    }
-
-    public function home_info(){
         if(session()->get('lang') == 'en'){
             $letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','R','T','X','Y','Z'];
         }else{
             $letters = ['ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ى'];
         }
-        $data = [
+        return Inertia::render('home',[
             'keywords'=> WelcomeKeyWords::get_key_words(),
             'data'=>welcome_handling::handle_data(),
             'letters'=>$letters
-        ];
-        return response()->json($data);
+        ]);
     }
 
     public function import_countries(){

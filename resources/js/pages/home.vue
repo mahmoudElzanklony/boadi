@@ -249,13 +249,11 @@ import FooterComponent from "../components/FooterComponent";
 import {mapActions , mapGetters , mapMutations} from "vuex";
 export default {
     name: "home",
+    props:['keywords','data','letters'],
     mixins:[switchLang,tableData],
     components: {FooterComponent, NavbarComponent},
     data:function (){
         return {
-            keywords:[],
-            data:[],
-            letters:[],
             table_url:'/paginate-data',
             table_requested_table:'definisions',
             table_columns:[
@@ -269,14 +267,6 @@ export default {
                 { "data": "expression" },
             ]
         }
-    },
-    async created() {
-        var com = this;
-        await axios.get('/get-info-home').then((e)=>{
-            com.keywords = e.data.keywords;
-            com.data = e.data.data;
-            com.letters = e.data.letters;
-        })
     },
     mounted() {
         // change arrow direction at english page
