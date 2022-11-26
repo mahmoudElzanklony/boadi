@@ -10,4 +10,5 @@ mix
   .webpackConfig({
     output: { chunkFilename: 'js/[name].js?id=[contenthash]' },
 
-  })
+  });
+

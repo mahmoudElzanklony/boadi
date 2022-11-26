@@ -29,6 +29,9 @@ use Illuminate\Support\Facades\DB;
 Route::group(['middleware'=>'changeLang'],function (){
     Route::get('/',[WelcomeController::class,'index']);
     Route::get('/home',[WelcomeController::class,'index']);
+    Route::get('/get-info-home',[WelcomeController::class,'home_info']);
+
+
     Route::get('/contactus',[\App\Http\Controllers\ContactUsController::class,'contactus']);
     Route::get('/aboutus',[WelcomeController::class,'about_us']);
     Route::get('/aboutbook',[WelcomeController::class,'about_book']);

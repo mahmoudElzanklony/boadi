@@ -20,7 +20,6 @@ export default {
     actions:{
         load_ads:function({commit,getters,state}){
             axios.post('/load-ads').then((e)=>{
-                console.log(e.data.data);
                 commit('inialize_data',e.data.data);
             });
         },
