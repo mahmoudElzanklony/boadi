@@ -58,7 +58,7 @@
 
 
 
-    <script src="{{ mix('/js/app.js') }}" defer></script>
+    <script src="{{ mix('/js/app.js') }}?v=1.1.1" defer></script>
 
 
     <style>
