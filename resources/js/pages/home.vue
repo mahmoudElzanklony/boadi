@@ -39,7 +39,7 @@
                                     <inertia-link href="/aboutus">عادل عبد العزيز بودي</inertia-link>
                                 </strong></p>
                                 <p>صاحب و مؤلف قاموس بودي المحاسبي</p>
-                                <p>adel@bo-cpa.com</p>
+                                <a href="mailto:adel@bo-cpa.com">adel@bo-cpa.com</a>
                             </div>
                         </div>
                     </div>

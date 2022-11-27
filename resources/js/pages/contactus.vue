@@ -41,7 +41,8 @@
                         </div>
                     </div>
 
-                    <VueRecaptcha @verify="onCaptchaVerified" sitekey="6LcXhy0jAAAAAG-s5D9y7tzlNVtq0i1hrCFBpccg"></VueRecaptcha>
+                    <VueRecaptcha @verify="onCaptchaVerified"
+                                  sitekey="6Lc6nzojAAAAAKi24G5BpWqsr94F5wTNoi482_W4"></VueRecaptcha>
                     <div class="col-12 mt-3">
                         <div class="form-group">
                             <input class="form-control btn btn-primary d-block w-100 text-center" :value="switchWord('send')" type="submit" disabled>
