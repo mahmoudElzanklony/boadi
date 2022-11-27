@@ -242,6 +242,15 @@ input:focus{
         text-align: center;
     }
 }
+
+.btn-outline-success {
+    color: $main_color;
+    border-color: $main_color;
+    &:hover{
+        background-color: #2a8268;
+    }
+}
+
 .big-button{
     width: 165px !important;
     border-radius: 50px !important;

@@ -55,7 +55,7 @@
                                     <div :class="'carousel-item '+(index == 0 ? 'active':'')"
                                          v-for="(ad,index) in ads_data"
                                          :key="index">
-                                        <a :href="ad['link']">
+                                        <a :href="ad['link']" target="_blank">
                                             <img class="d-block w-100" :src="'/images/ads/'+ad['image']" alt="First slide">
                                         </a>
                                     </div>
@@ -114,9 +114,13 @@
                 </h2>
                 <div class="overflow-auto">
                     <div class="letters">
-                        <span class="cursor-pointer" v-for="(i,index) in  letters" :key="index">
-                            {{ i }}
-                        </span>
+                        <p>
+                            <span class="cursor-pointer" v-for="(i,index) in  letters" :key="index">
+                                {{ i }}
+                            </span>
+                        </p>
+                        <button class="btn btn-outline-success">تصفية البحث</button>
+
                     </div>
                     <table  class="myTable table table-bordered table-striped table-striped table-hover">
                         <thead>
@@ -326,7 +330,7 @@ export default {
     }
     .letters{
         span{
-            margin-left: 10px;
+            margin-left: 8px;
         }
     }
 
@@ -355,7 +359,7 @@ export default {
     }
     .letters{
         span{
-            margin-right: 10px;
+            margin-right: 8px;
         }
     }
 
@@ -431,7 +435,6 @@ header{
     flex-wrap: wrap;
     margin: auto;
     span{
-        margin-bottom: 10px;
         width: 30px;
         height: 30px;
         border-radius: 4px;

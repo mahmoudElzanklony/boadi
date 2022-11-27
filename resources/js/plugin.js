@@ -94,6 +94,16 @@ $(document).ready(function (){
         }
         $('input[name="expression"]').click();
     })
+
+    // click on clear search
+    $('.content').on('click','.letters button',function (){
+        for(let input of document.querySelectorAll('.myTable thead tr td input')){
+            input.value = '';
+        }
+        $('input[name="expression"]').click();
+    })
+
+
     /*--------------------------end of public actions at all pages -------------------------------*/
 
     // toggle next
