@@ -7,8 +7,8 @@
     <meta name="google-site-verification" content="2SuwWd8cXOGWZCp38Kt2CqB0i5Xt6zPQbDbQdBMBoVU" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@if(array_key_exists('head_data',$page['props'])){{  $page['props']['head_data']['title'] }}@else قاموس بودي المحاسبي @endif</title>
-    <meta name="description" content="{{  array_key_exists('head_data',$page['props']) ? $page['props']['head_data']['description']:'إيواء بلس كل ما تود البحث عنه من تأجير وبيع اي شئ يخص العقارات ستجده هنا بأفضل الاسعار'  }}">
-    <meta name="keywords" content="{{  array_key_exists('head_data',$page['props']) ? $page['props']['head_data']['keywords']:'akar map ,  إيواء بلس , تأجير وبيع العقارات عن طريق الانترنت , افضل مواقع شراء العقارات'  }}">
+    <meta name="description" content="{{  array_key_exists('head_data',$page['props']) ? $page['props']['head_data']['description']:'قاموس بودي المحاسبي كل ما يخص المحاسبه ستحده هنا في هذا القاموس مع قدره سماع الكلمات الانجليزية'  }}">
+    <meta name="keywords" content="{{  array_key_exists('head_data',$page['props']) ? $page['props']['head_data']['keywords']:'boodi dictionary ,  بودي , يودي المحاسبي , قاموس بودي المحاسبي'  }}">
     <meta name="author" content="adel">
     <meta property="og:type" content="website">
     <meta property="og:url" content="boodaidictionary.com">
