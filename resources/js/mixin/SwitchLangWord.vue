@@ -234,12 +234,12 @@ export default {
                   tu:'',
               },
               about_us:{
-                  ar:'عن المؤلف',
+                  ar:'المؤلف',
                   en:'About Author',
                   tu:'',
               },
               about_book:{
-                  ar:'عن القاموس',
+                  ar:'القاموس',
                   en:'About Dictionary',
                   tu:'',
               },

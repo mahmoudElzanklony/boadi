@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="home">
         <navbar-component data-aos="fade-left"></navbar-component>
 <!--
         <header data-aos="fade-up" class="main-section" v-if="false">
@@ -36,9 +36,9 @@
                             </inertia-link>
                             <div>
                                 <p><strong>
-                                    <inertia-link href="/aboutus">عادل عبد العزيز بودي</inertia-link>
+                                    <inertia-link href="/aboutus">د/عادل عبد العزيز بودي</inertia-link>
                                 </strong></p>
-                                <p>صاحب و مؤلف قاموس بودي المحاسبي</p>
+                                <p>مؤلف قاموس بودي المحاسبي</p>
                                 <a href="mailto:adel@bo-cpa.com">adel@bo-cpa.com</a>
                             </div>
                         </div>
@@ -114,14 +114,20 @@
                 </h2>
                 <div class="overflow-auto">
                     <div class="letters">
-                        <p>
-                            <span class="cursor-pointer" v-for="(i,index) in  letters" :key="index">
+                        <p class="arabic">
+                            <span class="cursor-pointer mb-2" v-for="(i,index) in  letters['arabic']" :key="index">
                                 {{ i }}
                             </span>
                         </p>
-                        <button class="btn btn-outline-success">تصفية البحث</button>
+                        <p class="english">
+                            <span class="cursor-pointer mb-2" v-for="(i,index) in  letters['english']" :key="index">
+                                {{ i }}
+                            </span>
+                        </p>
 
                     </div>
+                    <button class="btn btn-outline-success position-absolute mt-4">تصفية البحث</button>
+
                     <table  class="myTable table table-bordered table-striped table-striped table-hover">
                         <thead>
                             <tr>
@@ -333,6 +339,11 @@ export default {
             margin-left: 8px;
         }
     }
+    @media (max-width: 767px) {
+         .arabic{
+             margin-bottom: 20px;
+         }
+    }
 
 }
 .en{
@@ -427,6 +438,13 @@ header{
             height: 100px;
         }
     }
+    @media (max-width: 767px) {
+         .row{
+             >div:first-of-type{
+                 margin-bottom: 15px;
+             }
+         }
+    }
 }
 .letters{
     display: flex;
@@ -434,8 +452,14 @@ header{
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
+    >p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     span{
-        width: 30px;
+        min-width: 30px;
         height: 30px;
         border-radius: 4px;
         border: 1px solid $main_color;

@@ -15,15 +15,17 @@ class WelcomeController extends Controller
     //
     public function index(){
         //return request()->cookie('inilalize');
-        if(session()->get('lang') == 'en'){
-            $letters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','R','T','X','Y','Z'];
-        }else{
-            $letters = ['ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ى'];
-        }
+
+        $letters_english = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','R','T','X','Y','Z'];
+        $letters_arabic = ['ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ى'];
+
         return Inertia::render('home',[
             'keywords'=> WelcomeKeyWords::get_key_words(),
             'data'=>welcome_handling::handle_data(),
-            'letters'=>$letters
+            'letters'=>[
+                'arabic'=>$letters_arabic,
+                'english'=>$letters_english,
+            ]
         ]);
     }
 

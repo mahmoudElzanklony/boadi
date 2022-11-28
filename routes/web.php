@@ -32,9 +32,9 @@ Route::group(['middleware'=>'changeLang'],function (){
 
 
     Route::get('/contactus',[\App\Http\Controllers\ContactUsController::class,'contactus']);
-    Route::get('/aboutus',[WelcomeController::class,'about_us']);
+    Route::get('/aboutauthor',[WelcomeController::class,'about_us']);
     Route::get('/aboutbook',[WelcomeController::class,'about_book']);
-    Route::get('/lang/{lang}',[LangController::class,'index']);
+  //  Route::get('/lang/{lang}',[LangController::class,'index']);
     // auth pages
     Route::get('/login',[AuthController::class,'login'])->name('login')->middleware('guest');
     Route::get('/register',[AuthController::class,'register'])->middleware('guest');;

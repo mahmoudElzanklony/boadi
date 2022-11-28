@@ -13,10 +13,10 @@ class definitions_dashboard
 
         return [
             'table_head_keys'=>[
-                'term_in_arabic'=>trans('keywords.term_in_arabic'),
-                'term_in_english'=>trans('keywords.term_in_english'),
-                'tags'=>trans('keywords.tags'),
-                'expression'=>trans('keywords.expression'),
+                'term_in_arabic'=>trans('keywords.search_term_in_arabic'),
+                'term_in_english'=>trans('keywords.search_term_in_english'),
+                'tags'=>trans('keywords.search_tags'),
+                'expression'=>trans('keywords.search_expression'),
                 'actions'=>trans('keywords.actions'),
             ],
             'data_model'=>[

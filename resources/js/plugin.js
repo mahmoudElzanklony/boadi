@@ -84,19 +84,20 @@ $(document).ready(function (){
         $('.myTable thead tr td input').eq(0).click();
     })
 
-    // click on letter to filter
-    $('.content').on('click','.letters span',function (){
-        var arabic = /[\u0600-\u06FF]/;
-        if(arabic.test($(this).text().trim())){
-            document.querySelector('.myTable thead tr td input').value = $(this).text().trim();
-        }else{
-            document.querySelector('.myTable thead tr td:nth-of-type(2) input').value = $(this).text().trim();
-        }
+    // click on letter arabic to filter
+    $('.content').on('click','.letters .arabic span',function (){
+        document.querySelector('.myTable thead tr td input').value = $(this).text().trim();
+        $('input[name="expression"]').click();
+    })
+
+    // click on letter english to filter
+    $('.content').on('click','.letters .english span',function (){
+        document.querySelector('.myTable thead tr td:nth-of-type(2) input').value = $(this).text().trim();
         $('input[name="expression"]').click();
     })
 
     // click on clear search
-    $('.content').on('click','.letters button',function (){
+    $('.content').on('click','.expressions button',function (){
         for(let input of document.querySelectorAll('.myTable thead tr td input')){
             input.value = '';
         }
@@ -123,6 +124,8 @@ $(document).ready(function (){
         msg.text = word;
         window.speechSynthesis.speak(msg);
     })
+
+
 
 
 });

@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <inertia-link class="navbar-brand" href="/home">
+            <inertia-link class="navbar-brand" href="/">
                 <img src="/images/logo.png">
             </inertia-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@
                         </inertia-link>
                     </li>
                     <li class="nav-item d-flex align-items-center">
-                        <inertia-link href="/aboutus" class="nav-link">
+                        <inertia-link href="/aboutauthor" class="nav-link">
                             <span>{{ switchWord('about_us') }}</span>
                         </inertia-link>
                     </li>

@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard">
         <side-navbar-component></side-navbar-component>
-        <div class="content users table-data-page">
+        <div class="content users definitions table-data-page">
             <div class="container mb-4">
                 <p class="d-flex mb-3 align-items-center justify-content-between main-title-toggle">
                     <span>{{ main_title }}</span>
@@ -115,8 +115,13 @@ export default {
         let all_thead_tds = document.querySelectorAll('table thead tr td:not(:last-of-type)');
         for( let input in all_thead_tds){
             if(!(isNaN(input))) {
+                if(input == 2){
+                    var size = '44';
+                }else{
+                    var size = all_thead_tds[input].textContent.trim().length;
+                }
                 all_thead_tds[input].innerHTML =
-                    '<input class="form-control" placeholder="'+all_thead_tds[input].textContent.trim()+'" name="'+Object.keys(this.handling_data['table_head_keys'])[input]+'">';
+                    '<input class="form-control" size="'+size+'" placeholder="'+all_thead_tds[input].textContent.trim()+'" name="'+Object.keys(this.handling_data['table_head_keys'])[input]+'">';
             }
         }
 
