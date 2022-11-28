@@ -15,7 +15,7 @@
                                 </inertia-link>
                             </li>
                             <li>
-                                <inertia-link href="/aboutus">
+                                <inertia-link href="/aboutauthor">
                                     {{ switchWord('about_us') }}
                                 </inertia-link>
                             </li>
