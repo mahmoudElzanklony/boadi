@@ -142,6 +142,27 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header pb-2">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <strong class="mb-2 d-block">التعريف</strong>
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">أغلاق</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!------------------end of brands section------------------------ -->
         <!------------------start of mobile section------------------------ -->
 
@@ -288,6 +309,14 @@ export default {
             if(!(isNaN(input))) {
                 all_thead_tds[input].innerHTML = '<input class="form-control" name="' + Object.keys(this.data['table_head'])[input] + '" placeholder="' + all_thead_tds[input].textContent + '">';
             }
+        }
+
+        if(window.innerWidth < 700){
+            $('.content').on('click','table tbody tr td:last-of-type',function (){
+                $('.modal-title').html($(this).parent().find('td:first-of-type').html());
+                $('.modal-body p').html($(this).html());
+                $('.modal').modal('show');
+            })
         }
 
         this.load_ads();
@@ -457,6 +486,9 @@ header{
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .english{
+        direction: ltr;
     }
     span{
         min-width: 30px;

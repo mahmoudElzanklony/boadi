@@ -17,7 +17,7 @@ class WelcomeController extends Controller
         //return request()->cookie('inilalize');
 
         $letters_english = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','S','R','T','X','Y','Z'];
-        $letters_arabic = ['ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ى'];
+        $letters_arabic = ['ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ي'];
 
         return Inertia::render('home',[
             'keywords'=> WelcomeKeyWords::get_key_words(),
