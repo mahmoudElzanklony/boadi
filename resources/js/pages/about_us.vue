@@ -3,7 +3,7 @@
         <navbar-component></navbar-component>
         <div class="container">
             <h1 class="main-title text-center">{{ switchWord('about_us') }}</h1>
-            <h1 class="main-title text-center">د/عادل عبد العزيز بودي</h1>
+            <h1 class="main-title text-center">د.عادل عبد العزيز بودي</h1>
             <div class="content-info">
                 <img class="d-block mb-4" src="/images/IMG_6305.jpg">
                 <div>

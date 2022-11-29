@@ -31,12 +31,12 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="image-content d-flex align-items-center">
-                            <inertia-link href="/aboutus">
+                            <inertia-link href="/aboutauthor">
                                 <img src="/images/IMG_6305.jpg">
                             </inertia-link>
                             <div>
                                 <p><strong>
-                                    <inertia-link href="/aboutus">د/عادل عبد العزيز بودي</inertia-link>
+                                    <inertia-link href="/aboutauthor">د.عادل عبد العزيز بودي</inertia-link>
                                 </strong></p>
                                 <p>مؤلف قاموس بودي المحاسبي</p>
                                 <a href="mailto:adel@bo-cpa.com">adel@bo-cpa.com</a>
