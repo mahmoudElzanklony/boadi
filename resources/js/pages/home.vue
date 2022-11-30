@@ -153,6 +153,11 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        <strong class="mb-2 d-block">المصطلح بالأنجليزي</strong>
+                        <p style="border-bottom: 1px solid #ddd;" class="d-flex mb-3 pb-3 justify-content-between align-items-center">
+                            <span></span>
+                            <span class="table-icon"><i class="ri-volume-down-line" ></i></span>
+                        </p>
                         <strong class="mb-2 d-block">التعريف</strong>
                         <p></p>
                     </div>
@@ -312,9 +317,10 @@ export default {
         }
 
         if(window.innerWidth < 700){
-            $('.content').on('click','table tbody tr td:last-of-type',function (){
-                $('.modal-title').html($(this).parent().find('td:first-of-type').html());
-                $('.modal-body p').html($(this).html());
+            $('.content').on('click','table tbody tr',function (){
+                $('.modal-title').html($(this).find('td:first-of-type').html());
+                $('.modal-body p:first-of-type span:first-of-type').html($(this).find('td:nth-of-type(2) p span:first-of-type').html());
+                $('.modal-body p:last-of-type').html($(this).find('td:last-of-type').html());
                 $('.modal').modal('show');
             })
         }
