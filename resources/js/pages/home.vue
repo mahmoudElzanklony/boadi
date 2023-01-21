@@ -39,6 +39,7 @@
                                     <inertia-link href="/aboutauthor">د.عادل عبد العزيز بودي</inertia-link>
                                 </strong></p>
                                 <p>مؤلف قاموس بودي المحاسبي</p>
+                                <p>الناشر : مكتبة جرير</p>
                                 <a href="mailto:adel@bo-cpa.com">adel@bo-cpa.com</a>
                             </div>
                         </div>
@@ -113,7 +114,7 @@
                     <span>{{ keywords.search_about_any_thing_you_want }}</span>
                 </h2>
                 <div class="overflow-auto">
-                    <div class="letters">
+                    <div class="letters" v-if="false">
                         <p class="arabic">
                             <span class="cursor-pointer mb-2" v-for="(i,index) in  letters['arabic']" :key="index">
                                 {{ i }}
@@ -127,7 +128,7 @@
 
                     </div>
                     <button class="btn btn-outline-success position-absolute mt-4">تصفية البحث</button>
-
+                    <p class="w-100 alert alert-warning mobile_note">تستطيع رؤيه التعريف بالكامل من خلال تمرير الشاشه الي الجانب الاخر او بالضغط علي التعريف لرؤيته بشكل اوضح</p>
                     <table  class="myTable table table-bordered table-striped table-striped table-hover">
                         <thead>
                             <tr>
@@ -722,6 +723,19 @@ header{
         }
     }
 }
-
-
+@media (min-width: 767px) {
+    .mobile_note{
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .mobile_note{
+        display: block !important;
+    }
+    .overflow-auto{
+        >button{
+            top:155px;
+        }
+    }
+}
 </style>

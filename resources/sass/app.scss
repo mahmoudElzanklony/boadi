@@ -9,6 +9,17 @@ body{
    // font-family: 'Cairo';
     font-family:"URW DIN Arabic" !important;
 }
+
+* {
+    user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+
+::selection { background: transparent;color:inherit; }
+::-moz-selection { background: transparent;color:inherit; }
 @font-face {
     font-family:"URW DIN Arabic";
     src: url("FontsFree-Net-URW-DIN-Arabic-1.ttf") format("truetype");
